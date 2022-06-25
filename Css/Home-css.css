@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+
+* {
+    color: white;
+    background-color: #1A1A2E;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    user-select: none;
+}
+
+label, input {
+    position: absolute;
+    display: none;
+
+    right: 2vw;
+    top: -1vw;
+}
+
+input {
+    visibility: hidden;
+}
+
+label {
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    font-size: 1.05rem;
+}
+
+.title_mobile {
+    display: none;
+    font-family: 'Roboto';
+    font-size: 1.8rem;
+    font-weight: 600;
+    justify-content: center;
+    margin-top: 7.5vh;
+}
+
+.msg {
+    font-family: 'Open Sans';
+}
+
+.text {
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.text p {
+    width:200px;
+    font-size: 1.6rem;
+    line-height: 2.5rem;
+    margin: 3vw 0 0 5vw;
+    text-align: center;
+}
+
+.line {
+    position: absolute;
+    top: 20%;
+    left: 2vw;
+    border-radius: 30% 50%;
+    height: 70%;
+    width: 7px;
+    background-color: #E94560;
+}
+
+.text span {
+    color: #E94560;
+}
+
+.btns {
+    height: min-content;
+    margin: 4vw 1vw 0 0;
+}
+
+.btns a {
+    text-decoration: none;
+}
+
+.btn1, .btn2 {
+    height: 7vh;
+    width: 200px;
+    background-color: #16213E;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto';
+    letter-spacing: 2px;
+    border-radius: 7px;
+    border: 1.2px solid #2b3a61;
+}
+
+.btn1:hover, .btn2:hover {
+    background-color: #E94560;
+    border: 2px solid #16213E;
+    transition: all 0.2s ease-in;
+}
+
+.quote {
+    font-size: 2.5rem;
+    width: 500px;
+    text-align: center;
+    margin: 2.5vw 0 0 0;
+}
+
+
+
+.quote div {
+    position: relative;
+    top: 7vh;
+    right: 1vw;
+    font-size: 1.6rem;
+}
+
+#toogle:checked ~ .container {
+    display: flex;
+    height: 95vh;
+    flex-direction: column;
+}
+
+#toogle:checked ~ .title_mobile {
+    display: none;
+}
+
+#toogle:checked ~ .msg {
+    display: none;
+}
+
+.current {
+    font-family: 'Roboto';
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #E94560;
+}
+
+.active {
+    color: #E94560;
+}
+
+.item {
+    text-decoration: none;
+    font-family: 'Inter';
+}
+
+.item:hover {
+    color: #E94560;
+    transition: all 0.2s ease-out;
+}
+
+@media all and (max-width: 600px) {
+    label, input {
+        display: flex;
+    }
+    .container {
+        display: none;
+    }
+    .title_mobile {
+        display: flex;
+    }
+    body {
+        height: 92.5vh;
+    }
+    .text {
+        display: flex;
+        align-items: center;
+        justify-content:space-evenly;
+        flex-direction: column;
+        margin: 0;
+    }
+    .text p {
+        margin-top: 10vh;
+        width: 300px;
+        margin: 0;
+    }
+    .line {
+        display: none;
+    }
+    .btns {
+        margin: 0;
+    }
+}
+
+@media all and (max-width: 900px) {
+    .quote {
+        display: none;
+    }
+}
